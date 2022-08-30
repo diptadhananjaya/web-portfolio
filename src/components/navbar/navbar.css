@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  height: 70px;
+  background-color: #003580;
+  display: flex;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1150px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 25px;
+  font-family: "PT Sans", sans-serif;
+}
+
+.dotLogo {
+  color: red;
+}
+
+.navItems {
+  display: flex;
+  gap: 30px;
+  transition: all 0.5s ease-out;
+}
+
+.btnNav {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: none;
+}
+
+.navButton {
+  background-color: #003580;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 9px 10px;
+  cursor: pointer;
+}
+
+.navItems.open {
+  display: flex;
+  transition: all 0.2s ease-out;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    transition: all 0.2s ease-out;
+  }
+
+  .btnNav {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .navButton {
+    transition: all 0.2s ease-out;
+  }
+
+  .logo {
+    margin-left: 30px;
+  }
+
+  .navItems {
+    gap: 10px;
+    background-color: #003580;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 30px;
+    display: none;
+    transition: all 1s ease-out;
+  }
+}
