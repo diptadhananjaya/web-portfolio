@@ -63,6 +63,12 @@
   transition: all 0.2s ease-out;
 }
 
+@media (max-width: 992px) {
+  .navContainer {
+    max-width: 950px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     position: relative;
