@@ -1,10 +1,15 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar = () => {
   const [openNavbar, setOpenNavbar] = useState(false);
+  const navigate = useNavigate();
+  const goIndex = () => {
+    navigate("/#index");
+  };
   return (
     <div>
       <div className="navbar">
@@ -20,7 +25,9 @@ const Navbar = () => {
             className="btnNav"
           />
           <div className={openNavbar ? "navItems open" : "navItems"}>
-            <button className="navButton">Home</button>
+            <button className="navButton" onClick={goIndex}>
+              Home
+            </button>
             <button className="navButton">About</button>
             <button className="navButton">Projects</button>
             <button className="navButton">Experience</button>
