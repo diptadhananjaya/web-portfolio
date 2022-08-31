@@ -5,7 +5,7 @@ import hero from "../../assets/Programming-pana.png";
 
 const Index = () => {
   return (
-    <div className="wrapHome">
+    <div className="wrapHome" id="index">
       <Navbar />
       <div className="homeContainer">
         <div className="introduction">
